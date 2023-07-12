@@ -1,4 +1,39 @@
 .subtitle {
-    margin-bottom: 10px; // Ajusta el valor según el margen deseado
+  color: $color-primary;
+  }
+
+.divider{
+  background-color: $color-secondary;
+  border: none;
+  padding: 1px;
+  margin-top: 10px;
+  margin-bottom:20px
+  }
+
+.text-info{
+  color: $color-text-info;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+
+.f{
+
+  &-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   
+  &-between{
+    justify-content: space-between;
+  }
+
+  &-column{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+

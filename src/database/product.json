@@ -1,0 +1,44 @@
+[
+    {
+        "id":"14",
+        "name": "Leche alqueria",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+        "price":4352,
+        "quantity":20,
+        "photo":"https://supermercadoahorramas.com.co/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeVBaSWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--d59cb1eb3fc41b9985bc07433a2f587b206af371/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9TY21WemFYcGxYM1J2WDJacGRGc0hhUUlnQTJrQ0lBTTZER052Ym5abGNuUkpJZ2hxY0djR09nWkZWRG9LYzJGMlpYSjdDRG9NY1hWaGJHbDBlV2xmT2dwemRISnBjRlE2RDJKaFkydG5jbTkxYm1SYkNHa0IvMmtCLzJrQi93PT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--f9b6205701877dad933126b17f2a1a57fbbba520/7702001041404.jpg?locale=es"
+    }, 
+    {
+        "id":"28",
+        "name": "de todito",
+        "description": "ure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and ever",
+        "price":2100,
+        "quantity":4,
+        "photo":"https://exitocol.vtexassets.com/arquivos/ids/18261161/Pasabocas-BBQ-DETODITO-165-gr-3168433_a.jpg?v=638188574740330000"
+    },
+    {
+        "id":"33",
+        "name": "Zucaritas",
+        "description": "t perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,",
+        "price":10500,
+        "quantity":52,
+        "photo":"https://elsuper.com.co/wp-content/uploads/2021/11/21059_202008031709355797450.jpeg"
+    },
+        
+    {
+        "id":"47",
+        "name": "milo",
+        "description": "our, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleas",
+        "price":5000,
+        "quantity":31,
+        "photo":"https://static.merqueo.com/images/products/large/b387b0d4-a1d9-4af2-bfe9-5618665ccd4b.jpg"
+    },
+    {
+        "id":"58",
+        "name": "cheetos",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e",
+        "price":6000,
+        "quantity":13,
+        "photo":"https://copservir.vtexassets.com/arquivos/ids/786732/CHEETOS-BOLIQUESO_F.png?v=637974404561000000"
+    }
+]
+
