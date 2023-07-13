@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Products from '../database/product.json'
-import WompiReact from './components/WompiReact';
+import WompiReact from './utils/WompiReact';
 import { useSelector } from 'react-redux';
 import { useNavigate} from 'react-router-dom';
 
