@@ -61,22 +61,23 @@ const Home = () => {
           </h2>
           <hr className="divider"></hr>
 
-          <div className="galeria">
+          <div className="galery">
             {Products.map((product) => {
 
               const productExist = cart.find(productCart => productCart.id === product.id)
               if (productExist) {
 
-                return <div className='galeria-foto-cart' key={product.id}>
-                  <span className='galeria-foto-cart-quantity'>
+                return <div className='galery-foto-cart active' key={product.id}>
+                  <span className='galery-foto-cart-quantity'>
                     {productExist.quantity}
                   </span>
-                  <img key={product.id} onClick={() => handleClick(product.name)} className='galeria-foto' src={product.photo} alt={product.name} />
+                  <img key={product.id} onClick={() => handleClick(product.name)} className='galery-foto' src={product.photo} alt={product.name} />
                 </div>
               } else {
 
-                return <img key={product.id} onClick={() =>  handleClick(product.name)} className='galeria-foto' src={product.photo} alt={product.name} />
-
+                return <div className='galery-foto-cart' key={product.id}> 
+                <img key={product.id} onClick={() =>  handleClick(product.name)} className='galery-foto' src={product.photo} alt={product.name} />
+                </div>
               }
 
 
