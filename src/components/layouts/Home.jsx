@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Products from '../../database/product.json'
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import Icon from '../../assets/icon.png';
+import Icon from '../../assets/icon.jpeg';
 import { BsCart4 } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
 import { emptyCart } from '../../redux/reducer/cart';

@@ -18,6 +18,7 @@
   }
 
   .home-icon{
+    width: 100px;
     border-radius: 10px;
     cursor: pointer;
   }
@@ -45,6 +46,10 @@
 
 .products {
   margin-right: 29px;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 }
 
 .selected-product {}
