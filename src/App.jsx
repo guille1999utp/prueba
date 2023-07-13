@@ -10,11 +10,10 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        <Route path="/product" Component={Home}>  
+        <Route path="/" Component={Home}>  
           <Route path="/product/:slug" Component={Product}/>  
+          <Route path="/product/cart" Component={Cart}/>
         </Route>
-
-        <Route path="/cart" Component={Cart}/>
       </Routes>
     </BrowserRouter>
   )

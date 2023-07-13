@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Products from '../database/product.json'
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { addCart, removeCart } from '../redux/reducer/cart';
 
 const Product = () => {
   const { slug } = useParams();
-  const [product, setProduct] = useState({})
+  const dispatch = useDispatch();
+  const [product, setProduct] = useState({});
+  const cart = useSelector(state => state.product.cart);
+
   useEffect(() => {
 
     const searchProduct = () => {
@@ -15,6 +20,8 @@ const Product = () => {
 
   }, [slug])
 
+  const filteredCart = cart.filter((item) => item.id === product.id);
+  const cartQuantity = filteredCart.length > 0 ? filteredCart[0].quantity : 0;
 
   return (<>
     <h2 className="subtitle">
@@ -26,17 +33,17 @@ const Product = () => {
         <>
 
           <span className='quantity-info'>
-            {product.quantity}
+            {cartQuantity}
           </span>
-          <img src={product.photo} className='image-info' />
+          <img src={product.photo} className='image-info' alt={product.name}/>
           <div className='f-row f-between'>
             <div className='f-row'>
               <h3 className='title-product'>{product.name}</h3>
-              <p className='price-product'>${product.price}</p>
+              <p className='price-product'>${new Intl.NumberFormat().format(parseInt(product.price))}</p>
             </div>
             <div className='f-row'>
-              <button className='botton-product-left'>-</button>
-              <button className='botton-product-right'>+</button>
+              <button className='botton-product-left' onClick={()=>dispatch(removeCart(product.id))}>-</button>
+              <button className='botton-product-right' onClick={()=>dispatch(addCart(product))}>+</button>
             </div>
           </div>
           <hr className='divider'></hr>

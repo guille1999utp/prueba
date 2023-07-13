@@ -1,45 +1,61 @@
 import React, { useEffect, useState } from 'react'
 import Products from '../database/product.json'
-import { useParams } from 'react-router-dom';
+import WompiReact from './components/WompiReact';
+import { useSelector } from 'react-redux';
+import { useNavigate} from 'react-router-dom';
 
 const Cart = () => {
-  const { slug } = useParams();
-  const [product, setProduct] = useState({})
+  const cart = useSelector(state => state.product.cart);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  const navigate = useNavigate();
+
   useEffect(() => {
 
-    const searchProduct = () => {
-      const product = Products.find(product => product.name.toLowerCase().replace(/\s/g, '-') === slug);
-      setProduct(product || {})
+    const calcTotal = async() =>{
+      const priceEveryProduct = cart.map(item => Products.find(product => product.id === item.id));
+
+      const totalPrice = cart.reduce((acc, item, index) => {
+        const price = priceEveryProduct[index].price;
+        const itemTotal = price * item.quantity;
+        return acc + itemTotal;
+      }, 0);   
+
+      setTotalPrice(totalPrice);
     }
-    searchProduct()
-
-  }, [slug])
-
-
+    
+    calcTotal();
+    
+  }, [cart])
+  
+  const navigateProduct = (name) =>{
+    let slug = name.toLowerCase().trim();
+    slug = slug.replace(/[\s\W-]+/g, "-");
+    navigate(`/product/${slug}`)
+  }
   return (<>
-    {Object.keys(product).length === 0 ? <p className='text-info'>this product does not exist</p> :
-      <>
-        <span className='quantity-info'>
-          {product.quantity}
-        </span>
-        <img src={product.photo} className='image-info' />
-        <div className='f-row f-between'>
-          <div className='f-row'>
-            <h3 className='title-product'>{product.name}</h3>
-            <p className='price-product'>${product.price}</p>
+    <h2 className="subtitle">
+      Shopping Cart
+    </h2>
+    <hr className="divider"></hr>
+    <div className="cart-info">
+      {cart.map(product =>
+        <div key={product.id}>
+          <div className="f-row" style={{ alignItems: "center" }}>
+            <span className='quantity-info'>
+              {product.quantity}
+            </span>
+            <img src={product.img} className="cart-info-image" onClick={()=>navigateProduct(product.name)} />
           </div>
-          <div className='f-row'>
-            <button className='botton-product-left'>-</button>
-            <button className='botton-product-right'>+</button>
-          </div>
+          <hr className='divider'></hr>
         </div>
-        <hr className='divider'></hr>
-        <p className='description-product'>
-          {product.description}
-        </p>
-        <hr className='divider'></hr>
-      </>
-    }
+      )}
+
+      <div className="f-row f-end">
+        <p className="text-price">Total:<span className="text-price-money">${new Intl.NumberFormat().format(parseInt(totalPrice))}</span></p>
+      </div>
+      <WompiReact total={totalPrice} />
+    </div>
   </>
 
 

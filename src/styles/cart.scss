@@ -1,0 +1,28 @@
+.cart-info{
+    .quantity-info{
+        display: flex;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        font-size: 21px;
+        color: white;
+        background-color: #A41AB9;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cart-info-image{
+        height: 100px;
+        cursor: pointer;
+    }
+
+    .text-price{
+        font-size: 2rem;
+        color:$color-text-info;
+        text-align: end;
+        .text-price-money{
+            color: $color-primary;
+        }
+    }
+}

@@ -16,12 +16,17 @@
     }
 
     .quantity-info{
+        display: flex;
+        text-align: center;
         position: absolute;
-        padding: 10px;
+        width: 40px;
+        height: 40px;
         font-size: 21px;
         color: white;
-        background-color: $color-primary;
+        background-color: #A41AB9;
         border-radius: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .price-product{
