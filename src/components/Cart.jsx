@@ -38,7 +38,7 @@ const Cart = () => {
       Shopping Cart
     </h2>
     <hr className="divider"></hr>
-    <div className="cart-info">
+    {cart.length > 0?  <div className="cart-info">
       {cart.map(product =>
         <div key={product.id}>
           <div className="f-row" style={{ alignItems: "center" }}>
@@ -51,16 +51,14 @@ const Cart = () => {
         </div>
       )}
 
-      <div className="f-row f-end">
+      <div className="f-row f-end f-row-reverse-movile">
         <p className="text-price">Total:<span className="text-price-money">${new Intl.NumberFormat().format(parseInt(totalPrice))}</span></p>
       </div>
       <WompiReact total={totalPrice} />
-    </div>
-  </>
-
-
-
-  )
+    </div>:<p className='text-info'>Please choose a product on the left.</p>
+     }
+ 
+  </>)
 }
 
 export default Cart;

@@ -17,8 +17,7 @@ export default function WompiReact({ total }) {
         const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         const script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src =
-          'https://checkout.wompi.co/widget.js';
+        script.src = 'https://checkout.wompi.co/widget.js';
         script.setAttribute('data-reference', reference);
         script.setAttribute('data-render', "button");
         script.setAttribute('data-public-key', "pub_test_4j2bwMnWjuYijbh7Wmt8aOBhLTzG7xfQ");

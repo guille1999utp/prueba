@@ -1,4 +1,5 @@
 .cart-info{
+    margin-bottom: 2rem;
     .quantity-info{
         display: flex;
         text-align: center;
@@ -21,8 +22,10 @@
         font-size: 2rem;
         color:$color-text-info;
         text-align: end;
+        margin-bottom: 1rem;
         .text-price-money{
             color: $color-primary;
         }
+
     }
 }

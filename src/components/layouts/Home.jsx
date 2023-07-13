@@ -21,6 +21,10 @@ const Home = () => {
   }
 
 
+    const handleClick = (name) => {
+      navigateProduct(name)
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
   useEffect(() => {
     const calcTotal = async() => {
@@ -67,11 +71,11 @@ const Home = () => {
                   <span className='galeria-foto-cart-quantity'>
                     {productExist.quantity}
                   </span>
-                  <img key={product.id} onClick={() => navigateProduct(product.name)} className='galeria-foto' src={product.photo} alt={product.name} />
+                  <img key={product.id} onClick={() => handleClick(product.name)} className='galeria-foto' src={product.photo} alt={product.name} />
                 </div>
               } else {
 
-                return <img key={product.id} onClick={() => navigateProduct(product.name)} className='galeria-foto' src={product.photo} alt={product.name} />
+                return <img key={product.id} onClick={() =>  handleClick(product.name)} className='galeria-foto' src={product.photo} alt={product.name} />
 
               }
 

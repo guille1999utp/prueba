@@ -36,7 +36,7 @@ const Product = () => {
             {cartQuantity}
           </span>
           <img src={product.photo} className='image-info' alt={product.name}/>
-          <div className='f-row f-between'>
+          <div className='f-row f-between f-row-reverse-movile'>
             <div className='f-row'>
               <h3 className='title-product'>{product.name}</h3>
               <p className='price-product'>${new Intl.NumberFormat().format(parseInt(product.price))}</p>
