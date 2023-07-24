@@ -1,6 +1,6 @@
 # Getting Started
 
-## Development
+## Project Set Up
 
 we located ourselves in the root of the project and install the necesary development dependencies:
 
