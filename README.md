@@ -1,6 +1,6 @@
-# Getting Started
+# Project Set Up
 
-## Project Set Up
+## Local Installation
 
 we located ourselves in the root of the project and install the necesary development dependencies:
 
@@ -19,7 +19,7 @@ the project will run in the port "5173", to access the project we enter the foll
 [http://localhost:5173](http://localhost:5173)
 
 
-## Production
+## Production Installation
 
 we located ourselves in the root of the project and install the necesary development dependencies:
 
